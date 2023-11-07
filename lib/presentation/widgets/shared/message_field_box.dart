@@ -20,7 +20,6 @@ class MessageFieldBox extends StatelessWidget {
         focusNode: focusNode,
         onTapOutside: (event) => focusNode.unfocus(),
         onFieldSubmitted: (value) {
-          print("Enviando mensaje: $value");
           onSubmit(value);
           focusNode.requestFocus();
           textController.clear();
@@ -40,7 +39,6 @@ class MessageFieldBox extends StatelessWidget {
             onPressed: () {
               final textValue = textController.text;
               onSubmit(textValue);
-              print("Enviando mensaje: $textValue");
               textController.clear();
               focusNode.requestFocus();
             },

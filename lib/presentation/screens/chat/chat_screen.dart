@@ -51,7 +51,10 @@ class _ChatView extends StatelessWidget {
                           : SomeoneMessageBubble(message: message);
                     })),
             // Caja de texto
-            MessageFieldBox(onSubmit: chatProvider.sendMessage),
+            Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
+                child: MessageFieldBox(onSubmit: chatProvider.sendMessage)),
           ],
         ),
       ),
